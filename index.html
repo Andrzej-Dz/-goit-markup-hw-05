@@ -15,7 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="container">
@@ -24,7 +27,6 @@
         <p>Web</p>
         <p class="logo-stopka-gora">Studio</p>
       </a>
-
       <nav class="nawigator" style="padding-left: 93px">
         <a class="link" href="index.html">Agencja</a>
         <a class="link" href="portfolio.html" style="margin-left: 46px"
@@ -32,7 +34,6 @@
         >
         <a class="link" href="#" style="margin-left: 46px">Kontakty</a>
       </nav>
-
       <a
         class="kontakt"
         href="mailto:info@devstudio.com"
@@ -45,7 +46,6 @@
           <p>info@devstudio.com</p>
         </div>
       </a>
-
       <a class="kontakt" href="#" style="margin-left: 30px">
         <div class="kontakt-icon">
           <svg width="10" height="16">
@@ -55,7 +55,6 @@
         </div>
       </a>
     </header>
-
     <main>
       <section class="ogloszenie">
         <div class="strona">
@@ -323,7 +322,6 @@
             </p>
           </address>
         </div>
-
         <div>
           <p class="stopka-2">DOŁĄCZ DO NAS</p>
           <div class="icon-social-media-stopka">
@@ -351,18 +349,18 @@
         </div>
         <div>
           <p class="stopka-2">ZAPISZ SIĘ DO NEWSLETTERA</p>
-          <div class="newsletter"><p>E-mail</p></div>
+          <div class="newsletter">
+            <p>E-mail</p>
+          </div>
           <button class="przycisk-usluga przycisk-aktywny">Zapisz się</button>
         </div>
       </div>
     </footer>
-
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
       </div>
     </div>
-
     <script src="./js/modal.js"></script>
   </body>
 </html>
