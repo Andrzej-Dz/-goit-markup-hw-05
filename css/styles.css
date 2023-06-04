@@ -74,6 +74,7 @@ footer {
 }
 
 .odstep {
+  width: 1600;
   border-bottom: 1px solid var(--kolor-margines-poziomy);
 }
 
@@ -126,6 +127,17 @@ footer {
   padding-top: 200px;
   padding-bottom: 200px;
   background-image: url("../images/tlo.png");
+  position: relative;
+}
+
+.ogloszenie::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 48, 58, 0.4);
 }
 
 .logo {
@@ -169,7 +181,7 @@ footer {
   color: var(--kolor-logo);
 }
 
-.link:hover::after,
+/* .link:hover::after, */
 .link-aktywny::after {
   display: block;
   content: "";
@@ -201,6 +213,7 @@ footer {
 .link:hover,
 .link:focus {
   color: var(--kolor-logo);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -248,6 +261,7 @@ footer {
 .kontakt-icon:focus {
   fill: var(--kolor-logo);
   color: var(--kolor-logo);
+  transition-property: fill, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -299,10 +313,11 @@ footer {
 .przycisk:hover,
 .przycisk:focus {
   color: white;
-  background: var(--kolor-logo);
+  background-color: var(--kolor-logo);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -339,6 +354,7 @@ footer {
 .wiersz-obrazow > div:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -363,9 +379,9 @@ footer {
 .obraz {
   width: 370px;
   height: 294px;
-  position: relative;
   margin: 0 auto;
   background-color: #bdbdbd;
+  position: relative;
   overflow: hidden;
 }
 
@@ -377,11 +393,13 @@ footer {
   height: 100%;
   transform: translatey(100%);
   background-color: var(--kolor-logo);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.obraz:hover .overlay {
-  transform: translatex(0);
+.wiersz-obrazow > div:hover .overlay,
+.wiersz-obrazow > div:focus .overlay {
+  transform: translatex(0%);
+  transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -500,6 +518,7 @@ footer {
 .box2:focus {
   border-color: var(--kolor-logo);
   fill: var(--kolor-logo);
+  transition-property: fill, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -518,6 +537,7 @@ footer {
 .kolo:hover,
 .kolo:focus {
   background-color: var(--kolor-logo);
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -552,6 +572,7 @@ footer {
 .kolo-biale:focus {
   background-color: var(--kolor-logo);
   fill: white;
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
